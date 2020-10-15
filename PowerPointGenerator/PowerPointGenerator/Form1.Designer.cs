@@ -34,8 +34,15 @@
             this.txtSlide = new System.Windows.Forms.TextBox();
             this.btnSearch = new System.Windows.Forms.Button();
             this.btnCreate = new System.Windows.Forms.Button();
-            this.lstvImages = new System.Windows.Forms.ListView();
             this.label3 = new System.Windows.Forms.Label();
+            this.cbBold = new System.Windows.Forms.CheckBox();
+            this.pctb1 = new System.Windows.Forms.PictureBox();
+            this.pctb2 = new System.Windows.Forms.PictureBox();
+            this.pctb3 = new System.Windows.Forms.PictureBox();
+            this.lblVerifySelection = new System.Windows.Forms.Label();
+            ((System.ComponentModel.ISupportInitialize)(this.pctb1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pctb2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pctb3)).BeginInit();
             this.SuspendLayout();
             // 
             // label1
@@ -86,23 +93,13 @@
             // btnCreate
             // 
             this.btnCreate.BackColor = System.Drawing.Color.Aqua;
-            this.btnCreate.Location = new System.Drawing.Point(1071, 803);
+            this.btnCreate.Location = new System.Drawing.Point(936, 810);
             this.btnCreate.Name = "btnCreate";
             this.btnCreate.Size = new System.Drawing.Size(191, 60);
             this.btnCreate.TabIndex = 5;
             this.btnCreate.Text = "Create Slide";
             this.btnCreate.UseVisualStyleBackColor = false;
             this.btnCreate.Click += new System.EventHandler(this.btnCreate_Click);
-            // 
-            // lstvImages
-            // 
-            this.lstvImages.HideSelection = false;
-            this.lstvImages.Location = new System.Drawing.Point(12, 483);
-            this.lstvImages.Name = "lstvImages";
-            this.lstvImages.Size = new System.Drawing.Size(1250, 302);
-            this.lstvImages.TabIndex = 6;
-            this.lstvImages.UseCompatibleStateImageBehavior = false;
-            this.lstvImages.SelectedIndexChanged += new System.EventHandler(this.lstvImages_SelectedIndexChanged);
             // 
             // label3
             // 
@@ -114,13 +111,59 @@
             this.label3.TabIndex = 7;
             this.label3.Text = "PowerPoint Slide Generator";
             // 
+            // cbBold
+            // 
+            this.cbBold.AutoSize = true;
+            this.cbBold.Location = new System.Drawing.Point(936, 183);
+            this.cbBold.Name = "cbBold";
+            this.cbBold.Size = new System.Drawing.Size(87, 29);
+            this.cbBold.TabIndex = 8;
+            this.cbBold.Text = "Bold";
+            this.cbBold.UseVisualStyleBackColor = true;
+            // 
+            // pctb1
+            // 
+            this.pctb1.Location = new System.Drawing.Point(12, 508);
+            this.pctb1.Name = "pctb1";
+            this.pctb1.Size = new System.Drawing.Size(373, 250);
+            this.pctb1.TabIndex = 9;
+            this.pctb1.TabStop = false;
+            // 
+            // pctb2
+            // 
+            this.pctb2.Location = new System.Drawing.Point(391, 508);
+            this.pctb2.Name = "pctb2";
+            this.pctb2.Size = new System.Drawing.Size(370, 250);
+            this.pctb2.TabIndex = 10;
+            this.pctb2.TabStop = false;
+            // 
+            // pctb3
+            // 
+            this.pctb3.Location = new System.Drawing.Point(767, 508);
+            this.pctb3.Name = "pctb3";
+            this.pctb3.Size = new System.Drawing.Size(373, 250);
+            this.pctb3.TabIndex = 11;
+            this.pctb3.TabStop = false;
+            // 
+            // lblVerifySelection
+            // 
+            this.lblVerifySelection.AutoSize = true;
+            this.lblVerifySelection.Location = new System.Drawing.Point(7, 771);
+            this.lblVerifySelection.Name = "lblVerifySelection";
+            this.lblVerifySelection.Size = new System.Drawing.Size(0, 25);
+            this.lblVerifySelection.TabIndex = 12;
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 25F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1277, 882);
+            this.ClientSize = new System.Drawing.Size(1152, 882);
+            this.Controls.Add(this.lblVerifySelection);
+            this.Controls.Add(this.pctb3);
+            this.Controls.Add(this.pctb2);
+            this.Controls.Add(this.pctb1);
+            this.Controls.Add(this.cbBold);
             this.Controls.Add(this.label3);
-            this.Controls.Add(this.lstvImages);
             this.Controls.Add(this.btnCreate);
             this.Controls.Add(this.btnSearch);
             this.Controls.Add(this.txtSlide);
@@ -129,6 +172,9 @@
             this.Controls.Add(this.label1);
             this.Name = "Form1";
             this.Text = "Form1";
+            ((System.ComponentModel.ISupportInitialize)(this.pctb1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pctb2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pctb3)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -142,8 +188,12 @@
         private System.Windows.Forms.TextBox txtSlide;
         private System.Windows.Forms.Button btnSearch;
         private System.Windows.Forms.Button btnCreate;
-        private System.Windows.Forms.ListView lstvImages;
         private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.CheckBox cbBold;
+        private System.Windows.Forms.PictureBox pctb1;
+        private System.Windows.Forms.PictureBox pctb2;
+        private System.Windows.Forms.PictureBox pctb3;
+        private System.Windows.Forms.Label lblVerifySelection;
     }
 }
 
