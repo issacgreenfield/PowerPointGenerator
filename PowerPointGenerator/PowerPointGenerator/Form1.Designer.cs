@@ -37,12 +37,26 @@
             this.label3 = new System.Windows.Forms.Label();
             this.cbBold = new System.Windows.Forms.CheckBox();
             this.pctb1 = new System.Windows.Forms.PictureBox();
+            this.lblVerifySelection = new System.Windows.Forms.Label();
             this.pctb2 = new System.Windows.Forms.PictureBox();
             this.pctb3 = new System.Windows.Forms.PictureBox();
-            this.lblVerifySelection = new System.Windows.Forms.Label();
+            this.pctb4 = new System.Windows.Forms.PictureBox();
+            this.pctb5 = new System.Windows.Forms.PictureBox();
+            this.pctb10 = new System.Windows.Forms.PictureBox();
+            this.pctb9 = new System.Windows.Forms.PictureBox();
+            this.pctb8 = new System.Windows.Forms.PictureBox();
+            this.pctb7 = new System.Windows.Forms.PictureBox();
+            this.pctb6 = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.pctb1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pctb2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pctb3)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pctb4)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pctb5)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pctb10)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pctb9)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pctb8)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pctb7)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pctb6)).BeginInit();
             this.SuspendLayout();
             // 
             // label1
@@ -82,7 +96,7 @@
             // 
             // btnSearch
             // 
-            this.btnSearch.Location = new System.Drawing.Point(936, 396);
+            this.btnSearch.Location = new System.Drawing.Point(927, 396);
             this.btnSearch.Name = "btnSearch";
             this.btnSearch.Size = new System.Drawing.Size(191, 60);
             this.btnSearch.TabIndex = 4;
@@ -93,7 +107,7 @@
             // btnCreate
             // 
             this.btnCreate.BackColor = System.Drawing.Color.Aqua;
-            this.btnCreate.Location = new System.Drawing.Point(936, 810);
+            this.btnCreate.Location = new System.Drawing.Point(927, 834);
             this.btnCreate.Name = "btnCreate";
             this.btnCreate.Size = new System.Drawing.Size(191, 60);
             this.btnCreate.TabIndex = 5;
@@ -125,25 +139,9 @@
             // 
             this.pctb1.Location = new System.Drawing.Point(12, 508);
             this.pctb1.Name = "pctb1";
-            this.pctb1.Size = new System.Drawing.Size(373, 250);
+            this.pctb1.Size = new System.Drawing.Size(225, 155);
             this.pctb1.TabIndex = 9;
             this.pctb1.TabStop = false;
-            // 
-            // pctb2
-            // 
-            this.pctb2.Location = new System.Drawing.Point(391, 508);
-            this.pctb2.Name = "pctb2";
-            this.pctb2.Size = new System.Drawing.Size(370, 250);
-            this.pctb2.TabIndex = 10;
-            this.pctb2.TabStop = false;
-            // 
-            // pctb3
-            // 
-            this.pctb3.Location = new System.Drawing.Point(767, 508);
-            this.pctb3.Name = "pctb3";
-            this.pctb3.Size = new System.Drawing.Size(373, 250);
-            this.pctb3.TabIndex = 11;
-            this.pctb3.TabStop = false;
             // 
             // lblVerifySelection
             // 
@@ -153,14 +151,93 @@
             this.lblVerifySelection.Size = new System.Drawing.Size(0, 25);
             this.lblVerifySelection.TabIndex = 12;
             // 
+            // pctb2
+            // 
+            this.pctb2.Location = new System.Drawing.Point(234, 508);
+            this.pctb2.Name = "pctb2";
+            this.pctb2.Size = new System.Drawing.Size(225, 155);
+            this.pctb2.TabIndex = 13;
+            this.pctb2.TabStop = false;
+            // 
+            // pctb3
+            // 
+            this.pctb3.Location = new System.Drawing.Point(456, 508);
+            this.pctb3.Name = "pctb3";
+            this.pctb3.Size = new System.Drawing.Size(225, 155);
+            this.pctb3.TabIndex = 14;
+            this.pctb3.TabStop = false;
+            // 
+            // pctb4
+            // 
+            this.pctb4.Location = new System.Drawing.Point(674, 508);
+            this.pctb4.Name = "pctb4";
+            this.pctb4.Size = new System.Drawing.Size(225, 155);
+            this.pctb4.TabIndex = 15;
+            this.pctb4.TabStop = false;
+            // 
+            // pctb5
+            // 
+            this.pctb5.Location = new System.Drawing.Point(893, 508);
+            this.pctb5.Name = "pctb5";
+            this.pctb5.Size = new System.Drawing.Size(225, 155);
+            this.pctb5.TabIndex = 16;
+            this.pctb5.TabStop = false;
+            // 
+            // pctb10
+            // 
+            this.pctb10.Location = new System.Drawing.Point(893, 660);
+            this.pctb10.Name = "pctb10";
+            this.pctb10.Size = new System.Drawing.Size(225, 155);
+            this.pctb10.TabIndex = 21;
+            this.pctb10.TabStop = false;
+            // 
+            // pctb9
+            // 
+            this.pctb9.Location = new System.Drawing.Point(674, 660);
+            this.pctb9.Name = "pctb9";
+            this.pctb9.Size = new System.Drawing.Size(225, 155);
+            this.pctb9.TabIndex = 20;
+            this.pctb9.TabStop = false;
+            // 
+            // pctb8
+            // 
+            this.pctb8.Location = new System.Drawing.Point(456, 660);
+            this.pctb8.Name = "pctb8";
+            this.pctb8.Size = new System.Drawing.Size(225, 155);
+            this.pctb8.TabIndex = 19;
+            this.pctb8.TabStop = false;
+            // 
+            // pctb7
+            // 
+            this.pctb7.Location = new System.Drawing.Point(234, 660);
+            this.pctb7.Name = "pctb7";
+            this.pctb7.Size = new System.Drawing.Size(225, 155);
+            this.pctb7.TabIndex = 18;
+            this.pctb7.TabStop = false;
+            // 
+            // pctb6
+            // 
+            this.pctb6.Location = new System.Drawing.Point(12, 660);
+            this.pctb6.Name = "pctb6";
+            this.pctb6.Size = new System.Drawing.Size(225, 155);
+            this.pctb6.TabIndex = 17;
+            this.pctb6.TabStop = false;
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 25F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1152, 882);
-            this.Controls.Add(this.lblVerifySelection);
+            this.ClientSize = new System.Drawing.Size(1144, 918);
+            this.Controls.Add(this.pctb10);
+            this.Controls.Add(this.pctb9);
+            this.Controls.Add(this.pctb8);
+            this.Controls.Add(this.pctb7);
+            this.Controls.Add(this.pctb6);
+            this.Controls.Add(this.pctb5);
+            this.Controls.Add(this.pctb4);
             this.Controls.Add(this.pctb3);
             this.Controls.Add(this.pctb2);
+            this.Controls.Add(this.lblVerifySelection);
             this.Controls.Add(this.pctb1);
             this.Controls.Add(this.cbBold);
             this.Controls.Add(this.label3);
@@ -175,6 +252,13 @@
             ((System.ComponentModel.ISupportInitialize)(this.pctb1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pctb2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pctb3)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pctb4)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pctb5)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pctb10)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pctb9)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pctb8)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pctb7)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pctb6)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -191,9 +275,16 @@
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.CheckBox cbBold;
         private System.Windows.Forms.PictureBox pctb1;
+        private System.Windows.Forms.Label lblVerifySelection;
         private System.Windows.Forms.PictureBox pctb2;
         private System.Windows.Forms.PictureBox pctb3;
-        private System.Windows.Forms.Label lblVerifySelection;
+        private System.Windows.Forms.PictureBox pctb4;
+        private System.Windows.Forms.PictureBox pctb5;
+        private System.Windows.Forms.PictureBox pctb10;
+        private System.Windows.Forms.PictureBox pctb9;
+        private System.Windows.Forms.PictureBox pctb8;
+        private System.Windows.Forms.PictureBox pctb7;
+        private System.Windows.Forms.PictureBox pctb6;
     }
 }
 

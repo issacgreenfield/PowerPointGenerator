@@ -1,4 +1,6 @@
-﻿using System;
+﻿using Newtonsoft.Json;
+using Newtonsoft.Json.Linq;
+using System;
 using System.Collections.Generic;
 using System.Drawing;
 using System.Net;
@@ -13,19 +15,19 @@ namespace PowerPointGenerator
 
         // Google Api Key and search engine
         public string API_KEY = "AIzaSyCvkBd_V0rtryLBdl2PhCiZlzsNryX_0hw";
-        public string CX = "015675127486788194367:dg6ulavfzom";
-        public const int MAX_RESULTS = 500; // Keep the search down to what is necesary
-        private const int RESULTS_PER_QUERY = 20;
-
-
+        public string CX = "984691d179c2cd67f"; //TODO: modify this to better suit the needs of the app
+        
         // Links to the online images
         public List<string> imgLinkList = new List<string>();
 
+        // PictureBoxes Array 
+        public PictureBox[] pictureBoxes;        
 
           
         public Form1()
         {
             InitializeComponent();
+            pictureBoxes = new PictureBox[] { pctb1, pctb2, pctb3, pctb4, pctb5, pctb6, pctb7, pctb8, pctb9, pctb10 };
         }
 
         private void txtTitle_TextChanged(object sender, EventArgs e)
@@ -48,18 +50,6 @@ namespace PowerPointGenerator
 
         private void btnSearch_Click(object sender, EventArgs e)
         {
-            // Testing resources
-            /*ImageList il = new ImageList();
-            il.Images.Add("test1", Image.FromFile(@"C:\Users\issac\source\repos\issacgreenfield\PowerPointGenerator\PowerPointGenerator\PowerPointGenerator\images\bg3.jpg"));
-            lstvImages.View = View.LargeIcon;
-            lstvImages.LargeImageList = il;
-            for (int i = 0; i < il.Images.Count; i++)
-            {
-                ListViewItem lvi = new ListViewItem();
-                lvi.ImageIndex = i;
-                lstvImages.Items.Add(lvi);
-            }*/
-
             // Clear the previous search first thing
             searchWords.Clear();
 
@@ -92,23 +82,48 @@ namespace PowerPointGenerator
                 {
                     searchWords.Add(slideWords[i]);
                 }
+                //Create the query
+                string search_query = "image";  //TODO:modify this to take search terms
+                foreach (string term in searchWords)
+                {
+                    search_query = search_query + "+" + term;
+                }
 
-
-
-
-
-
+                //Read in JSON object from Google Api
+                WebClient webClient = new WebClient();
+                webClient.Headers.Add("user-agent", "Only a test!");
+                var results = webClient.DownloadString(String.Format("https://www.googleapis.com/customsearch/v1?key={0}&cx={1}&q={2}&searchtype=image&alt=json", API_KEY, CX, search_query));
+                //Deserialize JSON object
+                var results_obj = JsonConvert.DeserializeObject<JObject>(results);
+                foreach (JObject item in results_obj["items"])
+                {
+                    // Check if it is valid
+                    if (item["pagemap"] != null)
+                    {
+                        var newitem = item["pagemap"];
+                        if (newitem["cse_thumbnail"] != null)
+                        { 
+                            //Add image link to list
+                            imgLinkList.Add(newitem["cse_thumbnail"][0]["src"].ToString());
+                        }
+                    }
+                }
+                foreach (PictureBox picturebox in pictureBoxes)
+                {
+                    if (imgLinkList.Count > 0)
+                    {
+                        picturebox.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
+                        picturebox.ImageLocation = imgLinkList[0];
+                        imgLinkList.RemoveAt(0);
+                    }
+                    else
+                    {
+                        return;
+                    }
+                }
+                this.lblVerifySelection.Text = "Please select an Image and 'Create Slide', or try searching again.";
 
             }
-
-            var request = WebRequest.Create("http://www.gravatar.com/avatar/6810d91caff032b202c50701dd3af745?d=identicon&r=PG");
-
-            using (var response = request.GetResponse())
-            using (var stream = response.GetResponseStream())
-            {
-                pctb1.Image = Bitmap.FromStream(stream);
-            }
-            pctb2.ImageLocation = "http://www.gravatar.com/avatar/6810d91caff032b202c50701dd3af745?d=identicon&r=PG";
         }
 
         private void btnCreate_Click(object sender, EventArgs e)
