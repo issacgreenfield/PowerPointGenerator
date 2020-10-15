@@ -12,21 +12,24 @@ namespace PowerPointGenerator
 {
     public partial class Form1 : Form
     {
+        // Global Input
+        public List<string> searchWords = new List<string>();
+
         // Links to the online images
         public List<string> imgLinkList = new List<string>();
 
-            
+          
         public Form1()
         {
             InitializeComponent();
         }
 
-        private void textBox1_TextChanged(object sender, EventArgs e)
+        private void txtTitle_TextChanged(object sender, EventArgs e)
         {
-
+            
         }
 
-        private void textBox2_TextChanged(object sender, EventArgs e)
+        private void txtSlide_TextChanged(object sender, EventArgs e)
         {
 
         }
@@ -34,18 +37,38 @@ namespace PowerPointGenerator
         private void btnSearch_Click(object sender, EventArgs e)
         {
             // Testing resources
-            ImageList il = new ImageList();
-            il.Images.Add("test1", Image.FromFile(@"C:\Documents\Working\PowerPointExercise\PowerPointGenerator\PowerPointGenerator\images\bg1.jpg"));
+            /*ImageList il = new ImageList();
+            il.Images.Add("test1", Image.FromFile(@"C:\Users\issac\source\repos\issacgreenfield\PowerPointGenerator\PowerPointGenerator\PowerPointGenerator\images\bg3.jpg"));
             lstvImages.View = View.LargeIcon;
             lstvImages.LargeImageList = il;
-            lstvImages.Items.Add("test");
             for (int i = 0; i < il.Images.Count; i++)
             {
                 ListViewItem lvi = new ListViewItem();
                 lvi.ImageIndex = i;
-                lvi.Text = "tester";
                 lstvImages.Items.Add(lvi);
+            }*/
+
+            string titleText = txtTitle.Text.Trim();
+            string slideText = txtSlide.Text.Trim();
+
+            // Check for empty text boxes
+            if (titleText.Length < 1)
+            {
+                MessageBox.Show("Please enter a title for your slide");
             }
+                        if (slideText.Length < 1)
+            {
+                MessageBox.Show("Please enter the text for your slide");
+            }
+
+            string[] titleWords = titleText.Split(' ');
+            for (int i = 0; i < titleWords.Length; i++)
+            {
+                searchWords.Add(titleWords[i]);
+            }
+
+
+
         }
 
         private void btnCreate_Click(object sender, EventArgs e)
