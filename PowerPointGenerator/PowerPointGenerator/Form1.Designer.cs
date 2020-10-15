@@ -35,6 +35,7 @@
             this.btnSearch = new System.Windows.Forms.Button();
             this.btnCreate = new System.Windows.Forms.Button();
             this.lstvImages = new System.Windows.Forms.ListView();
+            this.label3 = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // label1
@@ -59,7 +60,7 @@
             // 
             this.textBox1.Location = new System.Drawing.Point(12, 97);
             this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(100, 31);
+            this.textBox1.Size = new System.Drawing.Size(402, 31);
             this.textBox1.TabIndex = 2;
             this.textBox1.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
             // 
@@ -68,13 +69,13 @@
             this.textBox2.Location = new System.Drawing.Point(13, 183);
             this.textBox2.Multiline = true;
             this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(687, 273);
+            this.textBox2.Size = new System.Drawing.Size(886, 273);
             this.textBox2.TabIndex = 3;
             this.textBox2.TextChanged += new System.EventHandler(this.textBox2_TextChanged);
             // 
             // btnSearch
             // 
-            this.btnSearch.Location = new System.Drawing.Point(753, 396);
+            this.btnSearch.Location = new System.Drawing.Point(936, 396);
             this.btnSearch.Name = "btnSearch";
             this.btnSearch.Size = new System.Drawing.Size(191, 60);
             this.btnSearch.TabIndex = 4;
@@ -103,11 +104,22 @@
             this.lstvImages.UseCompatibleStateImageBehavior = false;
             this.lstvImages.SelectedIndexChanged += new System.EventHandler(this.lstvImages_SelectedIndexChanged);
             // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 17.875F);
+            this.label3.Location = new System.Drawing.Point(347, 9);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(619, 55);
+            this.label3.TabIndex = 7;
+            this.label3.Text = "PowerPoint Slide Generator";
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 25F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1277, 882);
+            this.Controls.Add(this.label3);
             this.Controls.Add(this.lstvImages);
             this.Controls.Add(this.btnCreate);
             this.Controls.Add(this.btnSearch);
@@ -131,6 +143,7 @@
         private System.Windows.Forms.Button btnSearch;
         private System.Windows.Forms.Button btnCreate;
         private System.Windows.Forms.ListView lstvImages;
+        private System.Windows.Forms.Label label3;
     }
 }
 
