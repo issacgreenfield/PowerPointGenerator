@@ -21,8 +21,8 @@ namespace PowerPointGenerator
         public List<string> imgLinkList = new List<string>();
 
         // PictureBoxes Array 
-        public PictureBox[] pictureBoxes;        
-
+        public PictureBox[] pictureBoxes;
+        public PictureBox pctbSelected;
           
         public Form1()
         {
@@ -131,9 +131,105 @@ namespace PowerPointGenerator
 
         }
 
-        private void lstvImages_SelectedIndexChanged(object sender, EventArgs e)
+        //TODO: reduce these down to a single generic function, avoid repitition
+        private void pctb1_Click(object sender, EventArgs e)
         {
+            if (pctbSelected != null)
+            {
+                pctbSelected.BorderStyle = BorderStyle.None;
+            }
+            pctbSelected = pctb1;
+            pctbSelected.BorderStyle = BorderStyle.Fixed3D;
+        }
 
+        private void pctb2_Click(object sender, EventArgs e)
+        {
+            if (pctbSelected != null)
+            {
+                pctbSelected.BorderStyle = BorderStyle.None;
+            }
+            pctbSelected = pctb2;
+            pctbSelected.BorderStyle = BorderStyle.Fixed3D;
+        }
+
+        private void pctb3_Click(object sender, EventArgs e)
+        {
+            if (pctbSelected != null)
+            {
+                pctbSelected.BorderStyle = BorderStyle.None;
+            }
+            pctbSelected = pctb3;
+            pctbSelected.BorderStyle = BorderStyle.Fixed3D;
+        }
+
+        private void pctb4_Click(object sender, EventArgs e)
+        {
+            if (pctbSelected != null)
+            {
+                pctbSelected.BorderStyle = BorderStyle.None;
+            }
+            pctbSelected = pctb4;
+            pctbSelected.BorderStyle = BorderStyle.Fixed3D;
+        }
+
+        private void pctb5_Click(object sender, EventArgs e)
+        {
+            if (pctbSelected != null)
+            {
+                pctbSelected.BorderStyle = BorderStyle.None;
+            }
+            pctbSelected = pctb5;
+            pctbSelected.BorderStyle = BorderStyle.Fixed3D;
+        }
+
+        private void pctb6_Click(object sender, EventArgs e)
+        {
+            if (pctbSelected != null)
+            {
+                pctbSelected.BorderStyle = BorderStyle.None;
+            }
+            pctbSelected = pctb6;
+            pctbSelected.BorderStyle = BorderStyle.Fixed3D;
+        }
+
+        private void pctb7_Click(object sender, EventArgs e)
+        {
+            if (pctbSelected != null)
+            {
+                pctbSelected.BorderStyle = BorderStyle.None;
+            }
+            pctbSelected = pctb7;
+            pctbSelected.BorderStyle = BorderStyle.Fixed3D;
+        }
+
+        private void pctb8_Click(object sender, EventArgs e)
+        {
+            if (pctbSelected != null)
+            {
+                pctbSelected.BorderStyle = BorderStyle.None;
+            }
+            pctbSelected = pctb8;
+            pctbSelected.BorderStyle = BorderStyle.Fixed3D;
+        }
+
+        private void pctb9_Click(object sender, EventArgs e)
+        {
+            if (pctbSelected != null)
+            {
+                pctbSelected.BorderStyle = BorderStyle.None;
+            }
+            pctbSelected = pctb9;
+            pctbSelected.BorderStyle = BorderStyle.Fixed3D;
+        }
+
+        private void pctb10_Click(object sender, EventArgs e)
+        {
+            if (pctbSelected != null)
+            {
+                pctbSelected.BorderStyle = BorderStyle.None;
+            }
+            pctbSelected = pctb10;
+            pctbSelected.BorderStyle = BorderStyle.Fixed3D;
         }
     }
 }

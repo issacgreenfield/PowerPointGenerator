@@ -90,13 +90,13 @@
             this.txtSlide.Location = new System.Drawing.Point(13, 183);
             this.txtSlide.Multiline = true;
             this.txtSlide.Name = "txtSlide";
-            this.txtSlide.Size = new System.Drawing.Size(886, 273);
+            this.txtSlide.Size = new System.Drawing.Size(886, 200);
             this.txtSlide.TabIndex = 3;
             this.txtSlide.TextChanged += new System.EventHandler(this.txtSlide_TextChanged);
             // 
             // btnSearch
             // 
-            this.btnSearch.Location = new System.Drawing.Point(927, 396);
+            this.btnSearch.Location = new System.Drawing.Point(970, 323);
             this.btnSearch.Name = "btnSearch";
             this.btnSearch.Size = new System.Drawing.Size(191, 60);
             this.btnSearch.TabIndex = 4;
@@ -107,7 +107,7 @@
             // btnCreate
             // 
             this.btnCreate.BackColor = System.Drawing.Color.Aqua;
-            this.btnCreate.Location = new System.Drawing.Point(927, 834);
+            this.btnCreate.Location = new System.Drawing.Point(1021, 757);
             this.btnCreate.Name = "btnCreate";
             this.btnCreate.Size = new System.Drawing.Size(191, 60);
             this.btnCreate.TabIndex = 5;
@@ -137,97 +137,107 @@
             // 
             // pctb1
             // 
-            this.pctb1.Location = new System.Drawing.Point(12, 508);
+            this.pctb1.Location = new System.Drawing.Point(17, 404);
             this.pctb1.Name = "pctb1";
             this.pctb1.Size = new System.Drawing.Size(225, 155);
             this.pctb1.TabIndex = 9;
             this.pctb1.TabStop = false;
+            this.pctb1.Click += new System.EventHandler(this.pctb1_Click);
             // 
             // lblVerifySelection
             // 
             this.lblVerifySelection.AutoSize = true;
-            this.lblVerifySelection.Location = new System.Drawing.Point(7, 771);
+            this.lblVerifySelection.Location = new System.Drawing.Point(24, 775);
             this.lblVerifySelection.Name = "lblVerifySelection";
             this.lblVerifySelection.Size = new System.Drawing.Size(0, 25);
             this.lblVerifySelection.TabIndex = 12;
             // 
             // pctb2
             // 
-            this.pctb2.Location = new System.Drawing.Point(234, 508);
+            this.pctb2.Location = new System.Drawing.Point(260, 404);
             this.pctb2.Name = "pctb2";
             this.pctb2.Size = new System.Drawing.Size(225, 155);
             this.pctb2.TabIndex = 13;
             this.pctb2.TabStop = false;
+            this.pctb2.Click += new System.EventHandler(this.pctb2_Click);
             // 
             // pctb3
             // 
-            this.pctb3.Location = new System.Drawing.Point(456, 508);
+            this.pctb3.Location = new System.Drawing.Point(502, 404);
             this.pctb3.Name = "pctb3";
             this.pctb3.Size = new System.Drawing.Size(225, 155);
             this.pctb3.TabIndex = 14;
             this.pctb3.TabStop = false;
+            this.pctb3.Click += new System.EventHandler(this.pctb3_Click);
             // 
             // pctb4
             // 
-            this.pctb4.Location = new System.Drawing.Point(674, 508);
+            this.pctb4.Location = new System.Drawing.Point(746, 404);
             this.pctb4.Name = "pctb4";
             this.pctb4.Size = new System.Drawing.Size(225, 155);
             this.pctb4.TabIndex = 15;
             this.pctb4.TabStop = false;
+            this.pctb4.Click += new System.EventHandler(this.pctb4_Click);
             // 
             // pctb5
             // 
-            this.pctb5.Location = new System.Drawing.Point(893, 508);
+            this.pctb5.Location = new System.Drawing.Point(987, 404);
             this.pctb5.Name = "pctb5";
             this.pctb5.Size = new System.Drawing.Size(225, 155);
             this.pctb5.TabIndex = 16;
             this.pctb5.TabStop = false;
+            this.pctb5.Click += new System.EventHandler(this.pctb5_Click);
             // 
             // pctb10
             // 
-            this.pctb10.Location = new System.Drawing.Point(893, 660);
+            this.pctb10.Location = new System.Drawing.Point(987, 579);
             this.pctb10.Name = "pctb10";
             this.pctb10.Size = new System.Drawing.Size(225, 155);
             this.pctb10.TabIndex = 21;
             this.pctb10.TabStop = false;
+            this.pctb10.Click += new System.EventHandler(this.pctb10_Click);
             // 
             // pctb9
             // 
-            this.pctb9.Location = new System.Drawing.Point(674, 660);
+            this.pctb9.Location = new System.Drawing.Point(746, 578);
             this.pctb9.Name = "pctb9";
             this.pctb9.Size = new System.Drawing.Size(225, 155);
             this.pctb9.TabIndex = 20;
             this.pctb9.TabStop = false;
+            this.pctb9.Click += new System.EventHandler(this.pctb9_Click);
             // 
             // pctb8
             // 
-            this.pctb8.Location = new System.Drawing.Point(456, 660);
+            this.pctb8.Location = new System.Drawing.Point(502, 578);
             this.pctb8.Name = "pctb8";
             this.pctb8.Size = new System.Drawing.Size(225, 155);
             this.pctb8.TabIndex = 19;
             this.pctb8.TabStop = false;
+            this.pctb8.Click += new System.EventHandler(this.pctb8_Click);
             // 
             // pctb7
             // 
-            this.pctb7.Location = new System.Drawing.Point(234, 660);
+            this.pctb7.Location = new System.Drawing.Point(260, 578);
             this.pctb7.Name = "pctb7";
             this.pctb7.Size = new System.Drawing.Size(225, 155);
             this.pctb7.TabIndex = 18;
             this.pctb7.TabStop = false;
+            this.pctb7.Click += new System.EventHandler(this.pctb7_Click);
             // 
             // pctb6
             // 
-            this.pctb6.Location = new System.Drawing.Point(12, 660);
+            this.pctb6.Location = new System.Drawing.Point(17, 578);
             this.pctb6.Name = "pctb6";
             this.pctb6.Size = new System.Drawing.Size(225, 155);
             this.pctb6.TabIndex = 17;
             this.pctb6.TabStop = false;
+            this.pctb6.Click += new System.EventHandler(this.pctb6_Click);
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 25F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1144, 918);
+            this.ClientSize = new System.Drawing.Size(1233, 881);
             this.Controls.Add(this.pctb10);
             this.Controls.Add(this.pctb9);
             this.Controls.Add(this.pctb8);
