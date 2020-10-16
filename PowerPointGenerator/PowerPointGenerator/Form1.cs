@@ -160,6 +160,7 @@ namespace PowerPointGenerator
             //add text to paragraph
             shape.TextFrame.Paragraphs[1].TextRanges.Append(new TextRange(txtSlide.Text));
             presentation.SaveToFile("slide.pptx", FileFormat.Pptx2010);
+            System.Diagnostics.Process.Start("slide.pptx");
 
         }
 
