@@ -5,6 +5,11 @@ using System.Collections.Generic;
 using System.Drawing;
 using System.Net;
 using System.Windows.Forms;
+//using Microsoft.Office.Interop.PowerPoint;
+//using Microsoft.Office.Core;
+using Spire.Presentation;
+using System.IO;
+using Magnum.FileSystem;
 
 namespace PowerPointGenerator
 {
@@ -15,7 +20,7 @@ namespace PowerPointGenerator
 
         // Google Api Key and search engine
         public string API_KEY = "AIzaSyCvkBd_V0rtryLBdl2PhCiZlzsNryX_0hw";
-        public string CX = "984691d179c2cd67f"; //TODO: modify this to better suit the needs of the app
+        public string CX = "984691d179c2cd67f"; // Performs an image search across google images
         
         // Links to the online images
         public List<string> imgLinkList = new List<string>();
@@ -40,11 +45,11 @@ namespace PowerPointGenerator
             // If the Bold checkbox is checked, any new words are bolded
             if (cbBold.Checked)
             {
-                txtSlide.Font = new Font(txtSlide.Font, FontStyle.Bold);
+                txtSlide.Font = new System.Drawing.Font(txtSlide.Font, FontStyle.Bold);
             }
             else
             {
-                txtSlide.Font = new Font(txtSlide.Font, FontStyle.Regular);
+                txtSlide.Font = new System.Drawing.Font(txtSlide.Font, FontStyle.Regular);
             }
         }
 
@@ -128,6 +133,33 @@ namespace PowerPointGenerator
 
         private void btnCreate_Click(object sender, EventArgs e)
         {
+            // Download the selected image
+            string picturePath = this.pctbSelected.ImageLocation;
+            //string[] picturePathArray = picturePath.Split('/');
+            //string filename = picturePathArray[picturePathArray.Length - 1];
+            using (WebClient webClient = new WebClient())
+            {
+                webClient.DownloadFile(picturePath, "image.png");
+            }
+            //create PPT document
+            Presentation presentation = new Presentation();
+            //add new slide
+            presentation.Slides.Append();
+            string ImageFile = @"image.png";
+            RectangleF rect = new RectangleF(0, 0, presentation.SlideSize.Size.Width, presentation.SlideSize.Size.Height);
+            presentation.Slides[0].Shapes.AppendEmbedImage(ShapeType.Rectangle, ImageFile, rect);
+            presentation.Slides[0].Shapes[0].Line.FillFormat.SolidFillColor.Color = Color.FloralWhite;
+            //append new shape  
+            IAutoShape shape = presentation.Slides[0].Shapes.AppendShape(ShapeType.Rectangle, new RectangleF(50, 150, 600, 200));
+            shape.ShapeStyle.LineColor.Color = Color.White;
+            shape.Fill.FillType = Spire.Presentation.Drawing.FillFormatType.None;
+            //add text to shape
+            shape.AppendTextFrame(txtTitle.Text);
+            //add new paragraph
+            shape.TextFrame.Paragraphs.Append(new TextParagraph());
+            //add text to paragraph
+            shape.TextFrame.Paragraphs[1].TextRanges.Append(new TextRange(txtSlide.Text));
+            presentation.SaveToFile("slide.pptx", FileFormat.Pptx2010);
 
         }
 
